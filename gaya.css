@@ -59,6 +59,10 @@ nav {
     height: 100%;
     width: auto;
 }
+td{
+    border: solid 1pt black;
+    padding: 10pt;
+}
 
 .sidebar{
     background-color: blue;
@@ -85,6 +89,9 @@ nav {
     justify-content: center;
     height: auto;
 }
+.ContentBerita a{
+    font-size: 15px;
+}
 
 .ContentBerita img {
     width: 200px;
@@ -92,10 +99,10 @@ nav {
     padding: auto;
     justify-content: center; 
 }
+
 footer{
     background-color: rgb(2, 89, 100);
     height: 80px;
-    /* display: flex; */
     text-align: center;
     align-items: center;
     justify-content: center;
