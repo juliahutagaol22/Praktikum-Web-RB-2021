@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Minggu 3 RB</title>
+</head>
+
+<body id="body">
+    <label for="tema">Pilih jenis tema : </label>
+    <select class="selectColor" id="warna" onchange ="UbahWarna()">
+        <option value="">select</option>
+        <option value="pink">Pink</option>
+        <option value="black">Hitam</option>
+        <option value="white">Putih</option>
+    </select>
+
+    <div class="tema">
+        <script>
+            function UbahWarna(){
+                var color = document.getElementById("warna");
+                if (warna.value=="pink"){
+                    document.body.style.backgroundColor = "pink";
+                    document.getElementById("body").style.color = "black";
+                }else if (warna.value=="black"){
+                    document.body.style.backgroundColor = "black";
+                    document.getElementById("body").style.color = "white";
+                }else if (warna.value=="white"){
+                    document.body.style.backgroundColor = "white";
+                    document.getElementById("body").style.color = "black";
+                }
+                else{
+                    document.body.style.backgroundColor = "red";
+                }
+            }
+        </script>
+    </div>
+     
+
+    <h1>This is My Website</h1>
+    <label for="tempat">Pilih Daerah wisata di Sumatera Utara yang diinginkan </label>
+        <select name="tempat" id="tempat" onchange="TempatSumut()">
+            <option value="">select</option>
+            <option value="Air Terjun Sipiso-piso">Air Terjun Sipiso-piso</option>
+            <option value="Pulau Samosir">Pulau Samosir</option>
+            <option value="Danau Toba">Danau Toba</option>
+            <option value="Bukit Gundaling">Bukit Gundaling</option>
+        </select>
+    
+    <p id="tampil"></p>
+    <div class="TempatSumut">
+        <script>
+        function TempatSumut(){
+            var namatempat=document.getElementById("tempat");
+            if(namatempat.value=="Air Terjun Sipiso-piso"){
+                var tempat=document.getElementById("tampil");
+                tempat.innerText = "Lokasi air terjun ini cukup terjangkau, kamu hanya perlu menempuh 35 km perjalanan dari Kota Berastagi atau sekitar 45 menit berkendara dari pusat Kota Medan. Jalur menuju kawasan wisata ini pun sudah tertata rapi, sehingga segala jenis kendaraan bermotor bisa melaluinya dengan aman.";
+            }else if(namatempat.value=="Pulau Samosir"){
+                var tempat=document.getElementById("tampil");
+                tempat.innerText = "Pulau Samosir merupakan salah satu pulau yang paling populer di Sumatera Utara. Lokasinya yang berada tepat di tengah Danau Toba menjadi daya tarik tersendiri bagi wisatawan. Ada banyak aktivitas seru yang bisa kamu lakukan di pulau vulkanik ini, mulai dari bertualang di Goa Marlakkop, menyaksikan pertunjukan tari Sigale-gale, berkeliling Museum Huta Bolon Simanindo, hingga menikmati keunikan Batu Parsidangan.";
+            }else if(namatempat.value=="Danau Toba"){
+                var tempat=document.getElementById("tampil");
+                tempat.innerText = "Danau Toba menjadi salah satu objek wisata yang tak boleh kamu lewatkan di Sumatera Utara. Ada banyak hal yang bisa kamu lakukan di sini, mulai dari melihat situs sejarah, mengunjungi rumah adat Batak, hingga mengelilingi Desa Tuktuk Siadong-adong.";
+            }else{
+                var tempat=document.getElementById("tampil");
+                tempat.innerText = "Datanglah ke Bukit Gundaling di Jalan Jamin Ginting, Berastagi, Karo. Memiliki ketinggian 1.575 mdpl, bukit ini menyajikan pesona Kota Berastagi dari ketinggian. Lokasi inilah yang membuat Bukit Gundaling cocok sebagai lokasi melihat matahari terbit dan terbenam. Jika beruntung, kamu bisa melihat pemandangan Gunung Sibayak dan Sinabung saat cuaca cerah.";
+            }
+        }    
+        </script>
+    </div>
+
+    <div class="Faktorial">
+        <p>Masukkan angka yang ingin dihitung faktorialnya</p>
+        <form>
+            <input type="text" name="" id="input">
+            <button id="button">hitung</button>
+            <div id="demo"></div>
+        </form>
+
+        <script>
+        var input = document.getElementById("input")
+        var button = document.getElementById("button")
+        var demo = document.getElementById("demo")
+
+        button.addEventListener("click", function(num){
+            num.preventDefault();
+            var valinp = input.value;
+            var hasil = 1;
+            for(var i=valinp; i>0; i--){
+                hasil *=i;
+            }
+            demo.innerHTML = `Hasil dari Faktorial adalah: ${hasil}`;
+        })
+        </script>
+    </div>
+
+</body>
+</html>
