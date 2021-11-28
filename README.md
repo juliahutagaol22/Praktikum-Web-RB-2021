@@ -1,5 +1,6 @@
-Modifikasi yang diberikan
--Penambahan CSS di dalam file index.php
+Modifikasi yang diberikan<br>
+
+-Penambahan CSS di dalam file index.php <br>
 -Melakukan penghapusan Cookie
 
 ### Tambahkan identitas dasar di sini: 
